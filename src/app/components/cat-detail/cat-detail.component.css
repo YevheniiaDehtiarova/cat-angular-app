@@ -1,0 +1,12 @@
+.breed-wrapper span{
+    margin-right: 15px;
+}
+.breed-wrapper{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+}
+.breed-wrapper a{
+    color: aqua;
+    display: block;
+}

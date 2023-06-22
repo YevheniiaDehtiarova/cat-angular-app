@@ -11,3 +11,10 @@
     margin-right: 30px;
     margin-bottom: 30px;
 }
+.cats-container{
+    display: flex;
+    flex-direction: column;
+}
+.cats-detail{
+    display: block;
+}

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { CatDetailComponent } from './components/cat-detail/cat-detail.component';
+import { BreedFilterComponent } from './components/breed-filter/breed-filter.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CatDetailComponent } from './components/cat-detail/cat-detail.component
     AppComponent,
     HomeComponent,
     SearchComponent,
-    CatDetailComponent
+    CatDetailComponent,
+    BreedFilterComponent
   ],
   imports: [
     BrowserModule,
