@@ -1,0 +1,13 @@
+.cats{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cat-img-wrapper img{
+    width: 300px;
+    height: 300px;
+}
+.cat-img-wrapper{
+    display: inline;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
