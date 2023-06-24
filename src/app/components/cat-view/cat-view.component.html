@@ -1,5 +1,5 @@
 
-<app-breed-filter></app-breed-filter>
+<app-breed-filter (choosedBreed)="breedHasChoosen($event)"></app-breed-filter>
 <div class="cats" *ngIf="cats">
     <div  class="cats-container" *ngFor="let cat of cats">
       <span class="cat-name">{{cat.categories?.name}}</span>

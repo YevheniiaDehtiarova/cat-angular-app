@@ -1,3 +1,10 @@
 <div class="breed-filter">Filter by breed</div>
-<input type="text" class="breed-input">
-<img src="../../../assets/arrow-down.png" alt=""  class="breed-arrow">
+<mat-form-field >
+    <mat-select [(value)]="selectedBreed" placeholder="" (selectionChange)="filterBreed($event)">
+      <mat-option *ngFor="let breed of breedFilter" [value]="breed.id">
+        {{breed.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+

@@ -2,8 +2,8 @@
 <div *ngIf="breeds.length > 0; else emptyBreedBlock">
     <div  class="breed-container" *ngFor="let breed of breeds">
       <div class="breed-wrapper">
-       <span>{{breed.name}}</span>
-       <span>{{breed.origin}}</span>
+        <div>Breed  <span>"{{breed.name}}"</span> </div>
+        <div>Country <span>"{{breed.origin}}"</span></div>
        <a href="{{breed.wikipedia_url}}">Cat detail wikipedia</a>
         </div>
     </div>

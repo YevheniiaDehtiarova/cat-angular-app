@@ -6,14 +6,6 @@ import { Breed } from 'src/app/models/breed.interface';
   templateUrl: './cat-detail.component.html',
   styleUrls: ['./cat-detail.component.css']
 })
-export class CatDetailComponent implements OnInit {
+export class CatDetailComponent  {
   @Input() breeds: Array<Breed> =[];
-
-
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.breeds)
-  }
-
 }

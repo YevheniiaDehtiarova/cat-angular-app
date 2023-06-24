@@ -1,6 +1,8 @@
 .cats{
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+    left: 300px;
 }
 .cat-img-wrapper img{
     width: 300px;

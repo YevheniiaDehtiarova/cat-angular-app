@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
+import { CatViewComponent} from './components/cat-view/cat-view.component';
 import { CatDetailComponent } from './components/cat-detail/cat-detail.component';
 
 const routes: Routes = [
   {
-    component: HomeComponent,
+    component: CatViewComponent,
     path: '',
-  },
-  {
-    component: SearchComponent,
-    path:'search/:query'
   },
   {
     component: CatDetailComponent,
