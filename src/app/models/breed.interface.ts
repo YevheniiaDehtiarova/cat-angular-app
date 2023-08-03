@@ -1,10 +1,8 @@
+import { BreedWeight } from "./breed-weight";
 import { Temperament } from "./temperament.enum";
 
 export interface Breed{
-    weight: {
-        imperial: number;
-        metric: number;
-    },
+    weight: BreedWeight,
     id: string;
     name: string;
     temperament: Temperament.Active;

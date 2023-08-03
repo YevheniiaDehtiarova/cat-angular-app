@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Cat } from 'src/app/models/cat.interface';
 import { CatService } from 'src/app/services/cat.service';
 import { BaseComponent } from '../base/base.component';
-import { takeUntil} from 'rxjs';
+import { takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-cat-view',
@@ -17,6 +17,10 @@ export class CatViewComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getCats();
+  }
+
+  public getCats(): void {
     this.catService
       .getCats()
       .pipe(takeUntil(this.destroy$))

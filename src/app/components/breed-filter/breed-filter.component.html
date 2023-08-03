@@ -1,7 +1,7 @@
 <div class="breed-filter">Filter by breed</div>
 <mat-form-field >
     <mat-select [(value)]="selectedBreed" placeholder="" (selectionChange)="filterBreed($event)">
-      <mat-option *ngFor="let breed of breedFilter" [value]="breed.id">
+      <mat-option *ngFor="let breed of breedFilterArray" [value]="breed.id">
         {{breed.name}}
       </mat-option>
     </mat-select>
