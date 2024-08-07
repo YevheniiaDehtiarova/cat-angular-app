@@ -3,12 +3,17 @@ import { BreedFilter } from 'src/app/models/breed-filter.interface';
 import { Breed } from 'src/app/models/breed.interface';
 import { CatService } from 'src/app/services/cat.service';
 import { BaseComponent } from '../base/base.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { NgFor } from '@angular/common';
 
 
 @Component({
   selector: 'app-breed-filter',
   templateUrl: './breed-filter.component.html',
+  imports: [ MatOptionModule, MatSelectModule, NgFor],
   styleUrls: ['./breed-filter.component.css'],
+  standalone: true
 })
 export class BreedFilterComponent extends BaseComponent implements OnInit {
   public breeds: Array<Breed> = [];

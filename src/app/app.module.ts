@@ -4,9 +4,6 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CatViewComponent } from './components/cat-view/cat-view.component';
-import { CatDetailComponent } from './components/cat-detail/cat-detail.component';
-import { BreedFilterComponent } from './components/breed-filter/breed-filter.component';
 import { BaseComponent } from './components/base/base.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -17,9 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({ declarations: [
         AppComponent,
-        CatViewComponent,
-        CatDetailComponent,
-        BreedFilterComponent,
         BaseComponent
     ],
     bootstrap: [AppComponent], imports: [BrowserModule,
