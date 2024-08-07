@@ -20,9 +20,9 @@ export class CatViewComponent extends BaseComponent implements OnInit {
     this.getCats();
   }
 
-  public getCats(): void {
+  public getCats(event?: string): void {
     this.catService
-      .getCats()
+      .getCats(event)
       .pipe(takeUntil(this.destroy$))
       .subscribe((data) => {
         this.cats = data;
@@ -30,22 +30,6 @@ export class CatViewComponent extends BaseComponent implements OnInit {
   }
 
   public breedHasChoosen(event: string) {
-    if (event === 'all') {
-      this.catService
-        .getCats()
-        .pipe(takeUntil(this.destroy$))
-        .subscribe((data) => {
-          this.cats = data;
-          this.cd.detectChanges();
-        });
-    } else {
-      this.catService
-        .getCatsByBreed(event)
-        .pipe(takeUntil(this.destroy$))
-        .subscribe((data) => {
-          this.cats = data;
-          this.cd.detectChanges();
-        });
-    }
+     event === 'all' ? this.getCats() : this.getCats(event)
   }
 }
