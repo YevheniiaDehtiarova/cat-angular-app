@@ -1,10 +1,19 @@
-<div class="breed-filter">Filter by breed</div>
+<!-- <div class="breed-filter">Filter by breed</div>
 <mat-form-field >
     <mat-select [(value)]="selectedBreed" placeholder="" (selectionChange)="filterBreed($event)">
       <mat-option *ngFor="let breed of breedFilterArray" [value]="breed.id">
         {{breed.name}}
       </mat-option>
     </mat-select>
+  </mat-form-field> -->
+  <div class="breed-filter">Filter by breed</div>
+  <mat-form-field>
+    <mat-select [(value)]="selectedBreed" (selectionChange)="filterBreed($event)">
+      @for (breed of breedFilterArray; track breed.id) {
+        <mat-option [value]="breed.id">
+          {{ breed.name }}
+        </mat-option>
+      }
+    </mat-select>
   </mat-form-field>
   
-
