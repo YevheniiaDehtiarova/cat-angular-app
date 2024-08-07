@@ -1,7 +1,7 @@
 
 <app-breed-filter (choosedBreed)="breedHasChoosen($event)"></app-breed-filter>
 <div class="cats" *ngIf="cats">
-    <div  class="cats-container" *ngFor="let cat of cats">
+   <!--  <div  class="cats-container" *ngFor="let cat of cats">
       <span class="cat-name">{{cat.categories?.name}}</span>
       <div class="cat-img-wrapper">
         <a routerLink="/details/{{cat.id}}"> <img class="cat-image" src="{{cat.url}}" alt="Random first slide">
@@ -9,5 +9,18 @@
      <app-cat-detail class="cats-detail" [breeds]="cat.breeds"></app-cat-detail>
         </div>
 
-    </div>
+    </div> -->
+
+    @for (cat of cats; track cat) {
+      <div class="cats-container">
+          <span class="cat-name">{{ cat.categories?.name }}</span>
+          <div class="cat-img-wrapper">
+              <a routerLink="/details/{{ cat.id }}">
+                  <img class="cat-image" src="{{ cat.url }}" alt="Random first slide">
+              </a>
+              <app-cat-detail class="cats-detail" [breeds]="cat.breeds"></app-cat-detail>
+          </div>
+      </div>
+  }
+  
   </div>

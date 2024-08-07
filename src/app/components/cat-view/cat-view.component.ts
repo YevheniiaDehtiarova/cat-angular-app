@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Cat } from 'src/app/models/cat.interface';
 import { CatService } from 'src/app/services/cat.service';
 import { BaseComponent } from '../base/base.component';
@@ -12,7 +12,7 @@ import { takeUntil } from 'rxjs';
 export class CatViewComponent extends BaseComponent implements OnInit {
   public cats: Array<Cat> = [];
 
-  constructor(private catService: CatService, private cd: ChangeDetectorRef) {
+  constructor(private catService: CatService) {
     super();
   }
 

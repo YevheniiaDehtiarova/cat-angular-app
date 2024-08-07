@@ -3,7 +3,7 @@ import { BreedFilter } from 'src/app/models/breed-filter.interface';
 import { Breed } from 'src/app/models/breed.interface';
 import { CatService } from 'src/app/services/cat.service';
 import { BaseComponent } from '../base/base.component';
-import { MatOptionSelectionChange } from '@angular/material';
+
 
 @Component({
   selector: 'app-breed-filter',
