@@ -9,7 +9,7 @@
     </div>
   </div>
   <ng-template #emptyBreedBlock>The breed of cat is empty</ng-template> -->
-  @if (breeds.length > 0) {
+ <!--  @if (breeds.length > 0) {
     @for (breed of breeds; track breed) {
         <div class="breed-container">
             <div class="breed-wrapper">
@@ -22,4 +22,22 @@
 } @else {
     <ng-template #emptyBreedBlock>The breed of cat is empty</ng-template>
 }
+ -->
+
+ <div *ngIf="breeds$ | async as breeds">
+    <ng-container *ngIf="breeds.length > 0; else emptyBreedBlock">
+      <div *ngFor="let breed of breeds; trackBy: trackByFn" class="breed-container">
+        <div class="breed-wrapper">
+          <div>Breed <span>"{{ breed?.name }}"</span></div>
+          <div>Country <span>"{{ breed?.origin }}"</span></div>
+          <a [href]="breed?.wikipedia_url">Cat detail wikipedia</a>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  
+  <ng-template #emptyBreedBlock>
+    The breed of cat is empty
+  </ng-template>
+  
 

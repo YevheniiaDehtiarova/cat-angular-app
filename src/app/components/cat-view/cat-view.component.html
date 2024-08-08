@@ -18,7 +18,7 @@
               <a routerLink="/details/{{ cat.id }}">
                   <img class="cat-image" src="{{ cat.url }}" alt="Random first slide">
               </a>
-              <app-cat-detail class="cats-detail" [breeds]="cat.breeds"></app-cat-detail>
+              <app-cat-detail  [breeds$]="breeds$" class="cats-detail"></app-cat-detail>
           </div>
       </div>
   }
